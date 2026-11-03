@@ -2,7 +2,7 @@
 
 **A timing circle for every enemy hit in Clair Obscur: Expedition 33, plus a grace period that turns near-miss dodges and parries into reduced damage instead of a full hit.**
 
-UE4SS Lua mod · no game files changed · MIT License
+**[Download on Nexus Mods](https://www.nexusmods.com/clairobscurexpedition33/mods/981)** · [GitHub releases](https://github.com/streeg/Riposte/releases) · UE4SS Lua mod · no game files changed · MIT License
 
 | The ring closes in on the hit | Inside the perfect window |
 |---|---|
@@ -38,7 +38,7 @@ The reduction is 90 % at the edge of the game's window and falls in a straight l
 ## Install
 
 1. Install [RE-UE4SS](https://github.com/UE4SS-RE/RE-UE4SS/releases) **3.0.1 or newer** into `Expedition 33\Sandfall\Binaries\Win64\`.
-2. Extract `Riposte-<version>.zip` into the game folder `Expedition 33\`.
+2. Download `Riposte-<version>.zip` from [Nexus Mods](https://www.nexusmods.com/clairobscurexpedition33/mods/981) or [GitHub releases](https://github.com/streeg/Riposte/releases) and extract it into the game folder `Expedition 33\`.
 3. Start the game. `ue4ss\UE4SS.log` should contain `[Riposte] v... loaded`.
 
 **Linux / Steam Deck:** add the launch option `WINEDLLOVERRIDES="dwmapi=n,b" %command%`.
