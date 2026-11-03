@@ -10,14 +10,16 @@
 - [x] `media/circle-approach.jpg`: anel se aproximando
 - [x] `media/circle-perfect.jpg`: anel na janela perfeita
 - [x] `media/learning-new-attack.jpg`: primeira vez de um ataque ("NEW ATTACK · LEARNING TIMING")
-- [ ] Subir as 3 imagens na aba Images do Nexus; primeira imagem da página: `circle-perfect.jpg`
+- [ ] Header: `media/nexus-header.jpg` (1300x372, gerado por `tools/make_header.py`)
+- [ ] Images: as 3 capturas de `media/`, `circle-perfect.jpg` primeiro
+- [ ] User submitted images/videos: permitir, com aprovação manual
 - [ ] Legenda da imagem de aprendizado: "First time an attack plays: Riposte learns its timing. From then on the ring is shown."
 - [ ] (Opcional, mas aumenta muito o download) GIF ou vídeo de 10-20 s com um GRAZE. Win+Alt+R grava com a Xbox Game Bar.
 
 ## 3. Página do Nexus
 - [ ] Título: **Riposte - Timing Circle and Grace Period**
 - [ ] Resumo: "A timing circle for every enemy hit, and a grace period that turns near-miss dodges and parries into reduced damage."
-- [ ] Descrição: colar `nexus/description.bbcode`
+- [ ] Descrição: no modo código-fonte do editor, colar `nexus/NEXUS_DESCRIPTION_EN.txt` inteiro
 - [ ] Categoria: Gameplay
 - [ ] Tags: Gameplay, User Interface, Quality of Life, **AI-Generated Content** (obrigatório)
 - [ ] Requisitos: RE-UE4SS (link externo: https://github.com/UE4SS-RE/RE-UE4SS/releases)

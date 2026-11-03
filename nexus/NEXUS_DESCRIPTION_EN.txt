@@ -1,0 +1,86 @@
+[heading]Description[/heading]
+[img]https://raw.githubusercontent.com/streeg/Riposte/main/media/circle-perfect.jpg[/img]
+
+[b]Riposte shows you exactly when to dodge, parry, jump or gradient-parry, and forgives near misses.[/b]
+
+A ring closes in on a dot and touches it the moment an enemy hit lands. The discs behind it are your character's real defense windows, drawn at the same scale, so the rule is simple: [b]press while the ring is inside the disc of the move you want.[/b]
+
+In vanilla a defense either cancels a hit or does nothing. Riposte adds a [b]grace period[/b] around the game's own window: press a little too early or too late and you take reduced damage instead of the full hit.
+
+Good for learning a tough boss, practicing parries, or just having an easier time.
+
+[b]Known issues[/b]
+[list]
+[*][b]Most attacks need to be seen once.[/b] The first time an attack plays, Riposte learns its timing and shows "NEW ATTACK · LEARNING TIMING" instead of a ring. From then on the ring is shown in every later fight and session.[/*]
+[*]The first time a jump attack is seen it may be labelled as a normal attack.[/*]
+[*]Some melee attacks where the enemy runs to you can land at a slightly different time on each run.[/*]
+[*]The late refund uses the game's normal "set HP", so Pictos that block healing can interfere with it.[/*]
+[/list]
+
+[img]https://raw.githubusercontent.com/streeg/Riposte/main/media/learning-new-attack.jpg[/img]
+
+[heading]Installation instructions[/heading]
+[list=1]
+[*]Install [url=https://github.com/UE4SS-RE/RE-UE4SS/releases]RE-UE4SS[/url] 3.0.1 or newer: extract it into [i]Expedition 33\Sandfall\Binaries\Win64\[/i] (next to SandFall-Win64-Shipping.exe).[/*]
+[*]Extract the Riposte zip into the game folder [i]Expedition 33\[/i]. The mod ends up in [i]Sandfall\Binaries\Win64\ue4ss\Mods\Riposte\[/i].[/*]
+[*]Optional: extract one preset zip over it. It only replaces [i]riposte_config.lua[/i].[/*]
+[*]Start the game. [i]ue4ss\UE4SS.log[/i] should contain [b][Riposte] v1.0.0 loaded[/b].[/*]
+[/list]
+
+[b]Linux / Steam Deck:[/b] add this launch option:
+[code]WINEDLLOVERRIDES="dwmapi=n,b" %command%[/code]
+
+[b]Uninstall:[/b] delete [i]ue4ss\Mods\Riposte\[/i]
+
+[b]Don't run it together with Graded Defense:[/b] both would reduce the same hits.
+
+[heading]Main features[/heading]
+[b]Timing circle[/b]
+[list]
+[*]One ring per upcoming hit, reaching the centre exactly at impact[/*]
+[*]Green = parry window, blue = dodge window, yellow = grace window[/*]
+[*]Orange = jump attack, purple = gradient attack; the label under the circle names the move to use[/*]
+[*]Windows are drawn for the character actually being attacked, so the circle follows window-size mods like Easier or Harder Dodge and Parry[/*]
+[/list]
+
+[b]Grace period[/b]
+[list]
+[*]Up to 0.25 s too early: the hit is reduced before it lands[/*]
+[*]Up to 0.20 s too late: part of the damage is given back as HP[/*]
+[*]90 % reduction at the edge of the game's window, fading to 0 % at the far edge[/*]
+[*]Near misses never trigger counters; buff and Lumina damage are never touched[/*]
+[/list]
+
+[b]Learning[/b]
+[list]
+[*]Attacks the game doesn't announce are learned the first time they play; after that the ring is accurate to about 15 ms and saved for every later session[/*]
+[*][b]Ctrl+F8[/b] re-learns a single attack if its ring looks wrong[/*]
+[/list]
+
+[b]Settings and presets[/b]
+[list]
+[*]Everything is in [i]riposte_config.lua[/i]: window sizes, reduction, colours, position, and a latency offset for TVs and wireless controllers[/*]
+[*]Optional presets: [b]Forgiving[/b], [b]Strict[/b], [b]Trainer Only[/b] (circle only, vanilla damage), [b]Grace Only[/b] (no circle)[/*]
+[/list]
+
+[b]Performance[/b]
+[list]
+[*]Does nothing outside battle and never writes to disk mid-fight[/*]
+[/list]
+
+[heading]Requirements[/heading]
+[list]
+[*][url=https://github.com/UE4SS-RE/RE-UE4SS/releases]RE-UE4SS[/url] 3.0.1 or newer (tested with 3.0.1 Beta, Git SHA 1ceefac8)[/*]
+[*]Tested on the Steam version (build 23765773). Game Pass is not tested.[/*]
+[/list]
+
+[heading]Shout outs[/heading]
+[list]
+[*][b]jjmmaaxx[/b], for [url=https://www.nexusmods.com/clairobscurexpedition33/mods/951]Graded Defense[/url], which Riposte started from[/*]
+[*]The [url=https://github.com/UE4SS-RE/RE-UE4SS]RE-UE4SS[/url] team, for the loader[/*]
+[*]trumank (retoc, kismet-analyzer), TheNaeem (Unreal Mappings Archive) and uuuu790 (E33-AutoParryAnim), for the Blueprint research credited in Graded Defense[/*]
+[/list]
+
+[b]Source code (MIT):[/b] [url=https://github.com/streeg/Riposte]github.com/streeg/Riposte[/url]
+
+[i]Written with Claude (AI).[/i]
