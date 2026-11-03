@@ -65,7 +65,14 @@ Optional presets (`Riposte-Preset-*.zip`) only replace `riposte_config.lua`:
 
 ## How timings are known
 
-Some attacks declare their hit moments in advance, and Riposte reads them. For the others, Riposte records when the hit actually reached you and replays that the next time the same attack plays (`riposte_learned.txt`). The first time you see such an attack, the circle says *NEW ATTACK - LEARNING TIMING*.
+**Most attacks need to be seen once.** It's once per attack, ever, not once per fight.
+
+![New attack: learning its timing](media/learning-new-attack.jpg)
+
+- **First time an attack plays:** if the game doesn't announce its hit moments, the circle says *NEW ATTACK · LEARNING TIMING* and shows no ring. Riposte records when the hit actually reaches you. Defend by eye this one time; the grace period still works.
+- **Every time after that:** the ring is shown, accurate to about 15 ms. Timings are saved in `riposte_learned.txt`, so they carry over to every later fight and session. You can share that file with other players.
+- **Attacks the game announces** show a ring on the first encounter as a first guess, and Riposte corrects it once it has seen the real hit.
+- **A ring looks wrong?** Press **Ctrl+F8** during or right after that attack to re-learn just that one.
 
 ## Known issues
 

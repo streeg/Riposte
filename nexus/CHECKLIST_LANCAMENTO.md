@@ -9,7 +9,9 @@
 ## 2. Mídia
 - [x] `media/circle-approach.jpg`: anel se aproximando
 - [x] `media/circle-perfect.jpg`: anel na janela perfeita
-- [ ] Primeira imagem da página: `circle-perfect.jpg` (é a que mais mostra o mod)
+- [x] `media/learning-new-attack.jpg`: primeira vez de um ataque ("NEW ATTACK · LEARNING TIMING")
+- [ ] Subir as 3 imagens na aba Images do Nexus; primeira imagem da página: `circle-perfect.jpg`
+- [ ] Legenda da imagem de aprendizado: "First time an attack plays: Riposte learns its timing. From then on the ring is shown."
 - [ ] (Opcional, mas aumenta muito o download) GIF ou vídeo de 10-20 s com um GRAZE. Win+Alt+R grava com a Xbox Game Bar.
 
 ## 3. Página do Nexus

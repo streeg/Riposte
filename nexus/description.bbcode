@@ -83,11 +83,13 @@ Everything is in [code]ue4ss\Mods\Riposte\Scripts\riposte_config.lua[/code] (pla
 
 [line]
 
-[size=5][b]How the timings are known[/b][/size]
-Many attacks declare their hit moments in advance; the mod reads them. Some attacks do not. For those the mod [b]records when the hit actually reached you[/b] and uses that the next time the same attack plays (saved in [i]riposte_learned.txt[/i]). So:
+[size=5][b]Do I have to see each attack once?[/b][/size]
+[b]Yes, most attacks: once per attack, ever, not once per fight.[/b]
 [list]
-[*]The first time you see such an attack, the circle shows [i]NEW ATTACK - LEARNING TIMING[/i].
-[*]If a recording looks wrong, press [b]Ctrl+F8[/b] during (or right after) that attack to re-learn it.
+[*][b]First time an attack plays:[/b] if the game doesn't announce its hit moments, the circle says [i]NEW ATTACK · LEARNING TIMING[/i] and shows no ring. Riposte records when the hit actually reaches you. Defend by eye this one time; the grace period still works.
+[*][b]Every time after that:[/b] the ring is shown, accurate to about 15 ms. Timings are saved in [i]riposte_learned.txt[/i], so they carry over to every later fight and session. You can share that file with other players.
+[*][b]Attacks the game announces[/b] show a ring on the first encounter as a first guess, and Riposte corrects it once it has seen the real hit.
+[*][b]A ring looks wrong?[/b] Press [b]Ctrl+F8[/b] during or right after that attack to re-learn just that one.
 [/list]
 
 [size=5][b]Known issues[/b][/size]
